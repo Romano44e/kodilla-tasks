@@ -42,13 +42,6 @@ public class TrelloClient {
 
     public List<TrelloBoardDto> getTrelloBoards() {
         URI uri = buildURI();
-//        URI uri = UriComponentsBuilder.fromHttpUrl(trelloApiEndpoint + "/members/" + trelloUsername + "/boards")
-//                .queryParam("key", trelloAppKey)
-//                .queryParam("token", trelloToken)
-//                .queryParam("fields", "name,id")
-//                .build()
-//                .encode()
-//                .toUri();
 
         TrelloBoardDto[] boardsResponse = restTemplate.getForObject(uri, TrelloBoardDto[].class);
 
