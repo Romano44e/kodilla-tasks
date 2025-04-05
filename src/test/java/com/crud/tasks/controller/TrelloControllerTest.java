@@ -29,12 +29,10 @@ import static org.mockito.Mockito.when;
 class TrelloControllerTest {
 
     @Autowired
-    private MockMvc mvc;
+    private MockMvc mockMvc;
 
     @MockBean
     private TrelloFacade trelloFacade;
-    @Autowired
-    private MockMvc mockMvc;
 
     @Test
     void shouldFetchEmptyTrelloBoards() throws Exception {
